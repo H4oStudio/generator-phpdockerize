@@ -8,7 +8,7 @@ parameters:
     locale: en
 
 framework:
-    #esi:             ~
+    esi:             ~
     translator: { fallbacks: ["%locale%"] }
     secret: "%secret%"
     router:
@@ -28,6 +28,8 @@ framework:
         save_path: "%kernel.var_dir%/sessions/%sulu.context%/%kernel.environment%"
     fragments:       ~
     http_method_override: true
+    assets:
+        json_manifest_path: '%kernel.root_dir%/../web/assets/manifest.json'
 
 # Twig Configuration
 twig:

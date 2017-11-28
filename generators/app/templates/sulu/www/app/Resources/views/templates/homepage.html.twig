@@ -11,9 +11,5 @@
 {% endblock %}
 
 {% block content %}
-    <h1 property="title">{{ content.title }}</h1>
-
-    <div property="article">
-        {{ content.article|raw }}
-    </div>
+     {% include ('partials/block-renderer.html.twig') with { 'blocks' : content.blocks, 'propertyName' : 'blocks' } %}
 {% endblock %}

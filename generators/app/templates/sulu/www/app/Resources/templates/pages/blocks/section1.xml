@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<type xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+          name="section1">
+    <meta>
+        <title lang="de">Section 1</title>
+        <title lang="en">Section 1</title>
+    </meta>
+
+    <properties>
+        <property name="titulo" type="text_line">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="es">Title</title>
+            </meta>
+        </property>
+    </properties>
+</type>

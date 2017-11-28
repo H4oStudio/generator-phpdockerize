@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <template xmlns="http://schemas.sulu.io/template/template"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
     <key>homepage</key>
@@ -40,11 +41,22 @@
             </properties>
         </section>
 
-        <property name="article" type="text_editor">
+        <section name="blocks">
             <meta>
-                <title lang="en">Article</title>
-                <title lang="de">Artikel</title>
+                <title lang="de">Blocks</title>
+                <title lang="en">Blocks</title>
             </meta>
-        </property>
+            <properties>
+                <block name="blocks" default-type="slider" minOccurs="0">
+                    <meta>
+                        <title lang="de">Inhalte</title>
+                        <title lang="en">Content</title>
+                    </meta>
+                    <types>
+                        <xi:include href="blocks/section1.xml"/>
+                    </types>
+                </block>
+            </properties>
+        </section>      
     </properties>
 </template>

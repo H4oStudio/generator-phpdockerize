@@ -7,7 +7,9 @@
 
         {% block meta %}{% endblock %}
 
-        {% block style %}{% endblock %}
+        {% block style %}
+        <link rel="stylesheet" href="{{ asset('assets/main.css') }}">
+        {% endblock %}
     </head>
     <body>
         <header>
@@ -45,6 +47,8 @@
             {% endblock %}
         </footer>
 
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+        <script src="{{ asset('assets/main.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
