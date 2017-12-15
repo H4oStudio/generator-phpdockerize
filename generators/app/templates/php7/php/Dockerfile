@@ -34,7 +34,7 @@ RUN curl -s -f -L -o /tmp/installer.php https://raw.githubusercontent.com/compos
  && rm -rf /tmp/* /tmp/.htaccess
 
 
-
+USER 1000:1000
 WORKDIR /var/www
 
 CMD ["php-fpm"]
