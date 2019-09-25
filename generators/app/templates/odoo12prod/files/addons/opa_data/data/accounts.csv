@@ -1,0 +1,265 @@
+name,code,type,reconcile
+CAJA CHICA GYE,110101001,account.data_account_type_liquidity,1
+CAJA GENERAL,110101002,account.data_account_type_liquidity,1
+BCO. INTERNACIONAL CTA CTE ,110102001,account.data_account_type_liquidity,1
+C X C - CLIENTES LOCALES,110301001,account.data_account_type_receivable,1
+C X C - CLIENTES EXTERIOR,110301002,account.data_account_type_receivable,1
+C X C CLIENTES CHEQUES POSTFECHADOS,110301002,account.data_account_type_receivable,1
+(-) PROVISION CUENTAS INCOBRABLES,110301003,account.data_account_type_receivable,1
+ANTICIPO DE SUELDOS,110304001,account.data_account_type_current_assets,1
+PRESTAMO A EMPLEADOS,110304002,account.data_account_type_current_assets,1
+OTRAS CTAS. POR COBRAR - VARIOS,110305001,account.data_account_type_current_assets,0
+ANTICIPO A PROVEEDORES LOCALES,110305002,account.data_account_type_current_assets,1
+VALORES POR LIQUIDAR,110305003,account.data_account_type_current_assets,0
+LICENCIAS,110401001,data_account_type_stock,1
+C.TRIB.IMPUESTO  SALIDA  DIVISAS,110501001,account.data_account_type_prepayments,1
+RET EN LA FUENTE 1 % VENTAS,110501002,account.data_account_type_prepayments,1
+RET EN FUENTE 8% VENTA,110501003,account.data_account_type_prepayments,1
+CREDITO TRIBUTARIO IVA,110501004,account.data_account_type_prepayments,1
+DEPOSITO EN GARANTIA ARRIENDO,110504001,account.data_account_type_prepayments,0
+MUEBLES Y ENSERES ADM,120104001,account.data_account_type_fixed_assets,0
+COSTO ADQUISIC EQUIPOS/COMPUT PRINCIPAL,120106001,account.data_account_type_fixed_assets,0
+DEP. ACUM. EDIFICIOS,120301001,account.data_account_type_fixed_assets,0
+DEP. ACUM. INSTAL. OFICINA,120301002,account.data_account_type_fixed_assets,0
+DEP. ACUM. MUEB. Y ENSER. OFICINA,120301003,account.data_account_type_fixed_assets,0
+DEP. ACUM. EQ. COMPUT. ADM,120301004,account.data_account_type_fixed_assets,0
+DEPREC. ACUM VEHICULO ADM,120301005,account.data_account_type_fixed_assets,0
+MARCAS Y PATENTES,120401001,account.data_account_type_non_current_assets,0
+(-) AMORTIZACION ACUM. GTOS PREOPERATIVOS,120402001,account.data_account_type_non_current_assets,0
+(-) AMORTIZACION ACUM . PUBLICIDAD Y PROPAGANDA,120402002,account.data_account_type_non_current_assets,0
+LICENCIAS Y SOFTWARES CONTABLES,120404001,account.data_account_type_fixed_assets,0
+LICENCIAS-SOFTWARES DE WINDOWS,120404002,account.data_account_type_fixed_assets,0
+LICENCIAS ANTIVIRUS FIREWALL,120404002,account.data_account_type_fixed_assets,0
+LICENCIA HOSTING WEB LINUX,120404003,account.data_account_type_fixed_assets,0
+SOFTWARE PARA GESTION DE PEDIDOS ON LINE,120405001,account.data_account_type_fixed_assets,0
+GASTOS PREOPERATIVOS,120406001,account.data_account_type_non_current_assets,0
+OBLIG. BANC. BCO DEL INTERNACIONAL,210102001,account.data_account_type_payable,1
+PROVEEDORES - LOCALES,210103001,account.data_account_type_payable,1
+PROVEEDORES - EXTERIOR,210103002,account.data_account_type_payable,1
+OTRAS CTAS X PAGAR VARIOS,210103003,account.data_account_type_payable,1
+VALORES POR LIQUIDAR,210103004,account.data_account_type_payable,1
+FACTURAS POR RECIBIR,210103005,account.data_account_type_payable,1
+SUELDOS POR PAGAR EMPLEADOS,210105001,account.data_account_type_current_liabilities,1
+APORTE AL IEES POR PAGAR,210105002,account.data_account_type_current_liabilities,1
+CUENTAS POR PAGAR EMPLEADOS,210105003,account.data_account_type_current_liabilities,1
+PRESTAMOS QUIROGRAFARIOS POR PAGAR,210105004,account.data_account_type_current_liabilities,1
+PRESTAMOS HIPOTECARIOS POR PAGAR,210105005,account.data_account_type_current_liabilities,1
+LIQUIDACION DE HABERES POR PAGAR,210105006,account.data_account_type_current_liabilities,1
+FONDOS POR MULTAS A EMPLEADOS,210105007,account.data_account_type_current_liabilities,1
+FONDOS DE RESERVA POR PAGAR,210105008,account.data_account_type_current_liabilities,1
+EXTENSION CONYUGES APORT.INDV POR PAGAR,210105009,account.data_account_type_current_liabilities,0
+PROVISION DECIMO TERCER SUELDO,210106001,account.data_account_type_current_liabilities,1
+PROVISION DECIMO CUARTO SUELDO,210106002,account.data_account_type_current_liabilities,1
+PROVISION FONDOS DE RESERVA ,210106003,account.data_account_type_current_liabilities,1
+PARTICIPACION DE UTILIDADES,210106004,account.data_account_type_current_liabilities,0
+VACACIONES POR PAGAR,210106005,account.data_account_type_current_liabilities,1
+RETENCION EN LA FUENTE 1% POR PAGAR,210107001,account.data_account_type_current_liabilities,1
+RETENCION EN LA FUENTE 2% POR PAGAR,210107002,account.data_account_type_current_liabilities,1
+RETENCION EN LA FUENTE 8% POR PAGAR,210107003,account.data_account_type_current_liabilities,1
+RETENCION EN LA FUENTE 10% POR PAGAR,210107004,account.data_account_type_current_liabilities,1
+RET. EN LA FTE. 1X1000 - Seguros,210107005,account.data_account_type_current_liabilities,1
+RET. EN LA FTE. IMPTO. RENTA - ROLES,210107006,account.data_account_type_current_liabilities,1
+RETENCION DEL IVA 10% POR PAGAR,210107007,account.data_account_type_current_liabilities,1
+RETENCION DEL IVA 20% POR PAGAR,210107008,account.data_account_type_current_liabilities,1
+RETENCION DEL IVA 30% POR PAGAR,210107009,account.data_account_type_current_liabilities,1
+RETENCION DEL IVA 70% POR PAGAR,210107010,account.data_account_type_current_liabilities,1
+RETENCION DEL IVA 100% POR PAGAR,210107011,account.data_account_type_current_liabilities,1
+IVA COBRADO,210107012,account.data_account_type_current_liabilities,1
+IMPUESTOS POR PAGAR,210107013,account.data_account_type_current_liabilities,1
+ANTICIPO DE CLIENTES,210111001,account.data_account_type_current_liabilities,0
+CTAS POR PAGAR A L/P,220201001,account.data_account_type_non_current_liabilities,0
+JUBILACION PATRONAL POR PAGAR,220701001,account.data_account_type_non_current_liabilities,0
+PROV. BONIFICACION X DESAHUCIO,220701002,account.data_account_type_non_current_liabilities,0
+CAPITAL SOCIAL PAGADO,310101001,data_account_type_capital,0
+APORTE FUTURAS CAPITALIZACION,320101001,data_account_type_capital,0
+RESULTADO 2018,340101001,data_account_type_capital,0
+RESULTADO PRESENTE EJERCICIO,340201001,account.data_unaffected_earnings,0
+RESERVA LEGAL,330101002,data_account_type_capital,0
+VENTAS DE PROYECTOS ODOO,410101001,account.data_account_type_revenue,0
+VENTAS RENTA ODOO,410101002,account.data_account_type_revenue,0
+VENTAS ZYGHT,410101003,account.data_account_type_revenue,0
+VENTAS FABRICA SOFTWARE,410101004,account.data_account_type_revenue,0
+VENTA DE CAPACITACIONES,410101005,account.data_account_type_revenue,0
+VENTA DE CONSULTORIAS,410101006,account.data_account_type_revenue,0
+VENTA DE SOPORTE,410101007,account.data_account_type_revenue,0
+VENTA DE HARDWARE,410101008,account.data_account_type_revenue,0
+DESCUENTOS EN VENTAS,420101001,account.data_account_type_revenue,0
+NOTA DE CREDITO FINANCIERA,420101002,account.data_account_type_other_income,0
+INGRESOS VARIOS,430101001,account.data_account_type_other_income,0
+UTILIDAD EN VENTA DE ACTIVO FIJO,430101002,account.data_account_type_other_income,0
+INGRESOS POR LICENCIAS,430101003,account.data_account_type_other_income,0
+INGRESOS X AJUSTES DE CARTERA,430101004,account.data_account_type_other_income,0
+COSTO DIRECTO LICENCIAS ODOO,510101001,account.data_account_type_direct_costs,0
+COSTOS  RENTA ODOO,510101002,account.data_account_type_direct_costs,0
+COSTOSS ZYGHT,510101003,account.data_account_type_direct_costs,0
+COSTOSS FABRICA SOFTWARE,510101004,account.data_account_type_direct_costs,0
+COSTOS DE CAPACITACIONES,510101005,account.data_account_type_direct_costs,0
+COSTOS DE CONSULTORIAS,510101006,account.data_account_type_direct_costs,0
+COSTOS DE SOPORTE,510101007,account.data_account_type_direct_costs,0
+COSTOS DE  HARDWARE,510101008,account.data_account_type_direct_costs,0
+ALQUILER DE IMPRESORA,610101001,account.data_account_type_expenses,0
+BOTELLONES DE AGUA ,610101002,account.data_account_type_expenses,0
+BURO DE CREDITO-ADM,610101003,account.data_account_type_expenses,0
+COMBUSTIBLE ,610101004,account.data_account_type_expenses,0
+ENERGIA ELECTRICA,610101005,account.data_account_type_expenses,0
+GARAJE/PARQUEO,610101006,account.data_account_type_expenses,0
+GUARDIANIA Y SEGURIDAD,610101007,account.data_account_type_expenses,0
+HONORARIOS PROFESIONALES ,610101008,account.data_account_type_expenses,0
+IMPUEST. MUNICIPALES ,610101009,account.data_account_type_expenses,0
+MATRIC. SOAT VEHIC.,610101010,account.data_account_type_expenses,0
+PERMISO CUERPO DE BOMBEROS ,610101011,account.data_account_type_expenses,0
+PERMISO DE FUNCIONAMIENTO,610101012,account.data_account_type_expenses,0
+PERMISOS VARIOS,610101013,account.data_account_type_expenses,0
+SEGURO Y COBERTURA ,610101014,account.data_account_type_expenses,0
+SERVICIO INTERNET ,610101015,account.data_account_type_expenses,0
+SUM. CAFETERIA,610101016,account.data_account_type_expenses,0
+SUMINIS. DE OFICINA E IMPRENTA,610101017,account.data_account_type_expenses,0
+SUMINISTROS LIMPIEZA ,610101018,account.data_account_type_expenses,0
+TELEF. FIJA-CONVENCIONAL ADM,610101019,account.data_account_type_expenses,0
+TELEFONIA CELULAR ADM,610101020,account.data_account_type_expenses,0
+TELEFONIA CELULAR VTAS,610101021,account.data_account_type_expenses,0
+"VIATICOS( HOSPEDAJE, MOV. ETC)",610101022,account.data_account_type_expenses,0
+MANT. EQUIP. COMPUT. ADM,610201001,account.data_account_type_expenses,0
+MANT. OFICINA ADM,610201002,account.data_account_type_expenses,0
+MANT Y REPARACIONES OFICINA ADM,610201003,account.data_account_type_expenses,0
+AMORTIZ. PUBLICIDAD Y PROPAGANDA,610301001,account.data_account_type_expenses,0
+PUBLICIDAD Y PROPAGANDA,610301002,account.data_account_type_expenses,0
+SUELDOS Y SALARIOS ,620101001,account.data_account_type_expenses,0
+DECIMO TERCER SUELDO ,620101002,account.data_account_type_expenses,0
+DECIMO CUARTO SUELDO ,620101003,account.data_account_type_expenses,0
+VACACIONES ,620101004,account.data_account_type_expenses,0
+SOBRETIEMPO ,620101005,account.data_account_type_expenses,0
+FONDO DE RESERVA ,620101006,account.data_account_type_expenses,0
+BONIF. A EMPLEADOS ,620101007,account.data_account_type_expenses,0
+INDEMNIZ. PERSONAL ,620101008,account.data_account_type_expenses,0
+APORTE PATRONAL ,620101009,account.data_account_type_expenses,0
+ALIMENTACION DEL PERSONAL ,620101010,account.data_account_type_expenses,0
+BONIFICACION POR DESAHUCIO,620101011,account.data_account_type_expenses,0
+JUBILACION PATRONAL ,620101012,account.data_account_type_expenses,0
+UNIFORMES DEL PERSONAL ,620101013,account.data_account_type_expenses,0
+VIATICOS Y MOVILIZACIONES ,620101014,account.data_account_type_expenses,0
+CAPACIT. Y ENTRENAM. ,620101015,account.data_account_type_expenses,0
+AGASAJOS AL PERSONAL,620101016,account.data_account_type_expenses,0
+ATENCIONES MEDICAS ,620101017,account.data_account_type_expenses,0
+SUELDOS Y SALARIOS ,620102001,account.data_account_type_expenses,0
+DECIMO TERCER SUELDO ,620102002,account.data_account_type_expenses,0
+DECIMO CUARTO SUELDO ,620102003,account.data_account_type_expenses,0
+VACACIONES ,620102004,account.data_account_type_expenses,0
+SOBRETIEMPO ,620102005,account.data_account_type_expenses,0
+FONDO DE RESERVA ,620102006,account.data_account_type_expenses,0
+BONIF. A EMPLEADOS ,620102007,account.data_account_type_expenses,0
+INDEMNIZ. PERSONAL ,620102008,account.data_account_type_expenses,0
+APORTE PATRONAL ,620102009,account.data_account_type_expenses,0
+ALIMENTACION DEL PERSONAL ,620102010,account.data_account_type_expenses,0
+BONIFICACION POR DESAHUCIO,620102011,account.data_account_type_expenses,0
+JUBILACION PATRONAL ,620102012,account.data_account_type_expenses,0
+UNIFORMES DEL PERSONAL ,620102013,account.data_account_type_expenses,0
+VIATICOS Y MOVILIZACIONES ,620102014,account.data_account_type_expenses,0
+CAPACIT. Y ENTRENAM. ,620102015,account.data_account_type_expenses,0
+AGASAJOS AL PERSONAL,620102016,account.data_account_type_expenses,0
+ATENCIONES MEDICAS ,620102017,account.data_account_type_expenses,0
+SUELDOS Y SALARIOS ,620103001,account.data_account_type_expenses,0
+DECIMO TERCER SUELDO ,620103002,account.data_account_type_expenses,0
+DECIMO CUARTO SUELDO ,620103003,account.data_account_type_expenses,0
+VACACIONES ,620103004,account.data_account_type_expenses,0
+SOBRETIEMPO ,620103005,account.data_account_type_expenses,0
+FONDO DE RESERVA ,620103006,account.data_account_type_expenses,0
+BONIF. A EMPLEADOS ,620103007,account.data_account_type_expenses,0
+INDEMNIZ. PERSONAL ,620103008,account.data_account_type_expenses,0
+APORTE PATRONAL ,620103009,account.data_account_type_expenses,0
+ALIMENTACION DEL PERSONAL ,620103010,account.data_account_type_expenses,0
+BONIFICACION POR DESAHUCIO,620103011,account.data_account_type_expenses,0
+JUBILACION PATRONAL ,620103012,account.data_account_type_expenses,0
+UNIFORMES DEL PERSONAL ,620103013,account.data_account_type_expenses,0
+VIATICOS Y MOVILIZACIONES ,620103014,account.data_account_type_expenses,0
+CAPACIT. Y ENTRENAM. ,620103015,account.data_account_type_expenses,0
+AGASAJOS AL PERSONAL,620103016,account.data_account_type_expenses,0
+ATENCIONES MEDICAS ,620103017,account.data_account_type_expenses,0
+SUELDOS Y SALARIOS ,620104001,account.data_account_type_expenses,0
+DECIMO TERCER SUELDO ,620104002,account.data_account_type_expenses,0
+DECIMO CUARTO SUELDO ,620104003,account.data_account_type_expenses,0
+VACACIONES ,620104004,account.data_account_type_expenses,0
+SOBRETIEMPO ,620104005,account.data_account_type_expenses,0
+FONDO DE RESERVA ,620104006,account.data_account_type_expenses,0
+BONIF. A EMPLEADOS ,620104007,account.data_account_type_expenses,0
+INDEMNIZ. PERSONAL ,620104008,account.data_account_type_expenses,0
+APORTE PATRONAL ,620104009,account.data_account_type_expenses,0
+ALIMENTACION DEL PERSONAL ,620104010,account.data_account_type_expenses,0
+BONIFICACION POR DESAHUCIO,620104011,account.data_account_type_expenses,0
+JUBILACION PATRONAL ,620104012,account.data_account_type_expenses,0
+UNIFORMES DEL PERSONAL ,620104013,account.data_account_type_expenses,0
+VIATICOS Y MOVILIZACIONES ,620104014,account.data_account_type_expenses,0
+CAPACIT. Y ENTRENAM. ,620104015,account.data_account_type_expenses,0
+AGASAJOS AL PERSONAL,620104016,account.data_account_type_expenses,0
+ATENCIONES MEDICAS ,620104017,account.data_account_type_expenses,0
+SUELDOS Y SALARIOS ,620105001,account.data_account_type_expenses,0
+DECIMO TERCER SUELDO ,620105002,account.data_account_type_expenses,0
+DECIMO CUARTO SUELDO ,620105003,account.data_account_type_expenses,0
+VACACIONES ,620105004,account.data_account_type_expenses,0
+SOBRETIEMPO ,620105005,account.data_account_type_expenses,0
+FONDO DE RESERVA ,620105006,account.data_account_type_expenses,0
+BONIF. A EMPLEADOS ,620105007,account.data_account_type_expenses,0
+INDEMNIZ. PERSONAL ,620105008,account.data_account_type_expenses,0
+APORTE PATRONAL ,620105009,account.data_account_type_expenses,0
+ALIMENTACION DEL PERSONAL ,620105010,account.data_account_type_expenses,0
+BONIFICACION POR DESAHUCIO,620105011,account.data_account_type_expenses,0
+JUBILACION PATRONAL ,620105012,account.data_account_type_expenses,0
+UNIFORMES DEL PERSONAL ,620105013,account.data_account_type_expenses,0
+VIATICOS Y MOVILIZACIONES ,620105014,account.data_account_type_expenses,0
+CAPACIT. Y ENTRENAM. ,620105015,account.data_account_type_expenses,0
+AGASAJOS AL PERSONAL,620105016,account.data_account_type_expenses,0
+ATENCIONES MEDICAS ,620105017,account.data_account_type_expenses,0
+SUELDOS Y SALARIOS ,620106001,account.data_account_type_expenses,0
+DECIMO TERCER SUELDO ,620106002,account.data_account_type_expenses,0
+DECIMO CUARTO SUELDO ,620106003,account.data_account_type_expenses,0
+VACACIONES ,620106004,account.data_account_type_expenses,0
+SOBRETIEMPO ,620106005,account.data_account_type_expenses,0
+FONDO DE RESERVA ,620106006,account.data_account_type_expenses,0
+BONIF. A EMPLEADOS ,620106007,account.data_account_type_expenses,0
+INDEMNIZ. PERSONAL ,620106008,account.data_account_type_expenses,0
+APORTE PATRONAL ,620106009,account.data_account_type_expenses,0
+ALIMENTACION DEL PERSONAL ,620106010,account.data_account_type_expenses,0
+BONIFICACION POR DESAHUCIO,620106011,account.data_account_type_expenses,0
+JUBILACION PATRONAL ,620106012,account.data_account_type_expenses,0
+UNIFORMES DEL PERSONAL ,620106013,account.data_account_type_expenses,0
+VIATICOS Y MOVILIZACIONES ,620106014,account.data_account_type_expenses,0
+CAPACIT. Y ENTRENAM. ,620106015,account.data_account_type_expenses,0
+AGASAJOS AL PERSONAL,620106016,account.data_account_type_expenses,0
+ATENCIONES MEDICAS ,620106017,account.data_account_type_expenses,0
+DEPREC. VEHICULO ADM,620201001,account.data_account_type_depreciation,0
+DEPREC. INSTALACIONES,620201002,account.data_account_type_depreciation,0
+DEPREC. MUEBLES Y ENSERES,620201003,account.data_account_type_depreciation,0
+DEPREC. EQUIP. COMPUT.ADM,620201004,account.data_account_type_depreciation,0
+DEPRECIACION DE EDIFICIOS,620201005,account.data_account_type_depreciation,0
+AMORTIZ. PATENTE,620201006,account.data_account_type_depreciation,0
+AMORTZ. SOFTWARE - LICENCIAS,620201007,account.data_account_type_depreciation,0
+AMORTIZ.GTOS PREOPERATIVOS,620201008,account.data_account_type_depreciation,0
+HONORARIOS PROFESIONALES,620301001,account.data_account_type_expenses,0
+GASTOS LEGALES ,620301002,account.data_account_type_expenses,0
+GASTOS DE REPRESENTACION ,620301003,account.data_account_type_expenses,0
+SERVICIOS PRESTADOS,620301004,account.data_account_type_expenses,0
+"ESTUDIO, ASESORIA Y CONSULTORIA",620301005,account.data_account_type_expenses,0
+SUMINIS. OFIC E IMPRENTA ,620301006,account.data_account_type_expenses,0
+SUMINIS. CAFETERIA ,620301007,account.data_account_type_expenses,0
+SUMINIS. LIMPIEZA ,620301008,account.data_account_type_expenses,0
+IMPUEST. MUNICIPALES ,620301009,account.data_account_type_expenses,0
+PERMISO DE BOMBEROS,620301010,account.data_account_type_expenses,0
+CONTRIBUCION SUPER CIAS.,620301011,account.data_account_type_expenses,0
+SEGUROS Y COBERTURAS ,620301012,account.data_account_type_expenses,0
+COMB. Y MOVILIZACIONES ,620301013,account.data_account_type_expenses,0
+PASAJES DE AVION EJECUTIVO,620301014,account.data_account_type_expenses,0
+AGUA POTABLE ,620301015,account.data_account_type_expenses,0
+INTERNET ,620301016,account.data_account_type_expenses,0
+ENERGIA ELECTRICA ,620301017,account.data_account_type_expenses,0
+GASTOS DE VIAJE,620301018,account.data_account_type_expenses,0
+BOTELLONES DE AGUA ,620301019,account.data_account_type_expenses,0
+ENVIO DE CORRESPONDENCIA,620301020,account.data_account_type_expenses,0
+ALQUILER DE IMPRESORA ,620301021,account.data_account_type_expenses,0
+GASTO DE CTAS INCOBRABLES,620301022,account.data_account_type_expenses,0
+GASTOS BANCARIOS,620401001,account.data_account_type_expenses,0
+COMISIONES BANCARIAS,620401002,account.data_account_type_expenses,0
+GASTO  POR IMPTOS. SAL. DIVISAS,620401003,account.data_account_type_expenses,0
+INTERESES Y MULTAS,620501001,account.data_account_type_expenses,0
+GASTOS NO DEDUCIBLES,620501002,account.data_account_type_expenses,0
+INTERESES A TERCEROS,630101001,account.data_account_type_expenses,0
+PERDIDA EN VENTA DE ACTIVOS FIJOS,630101002,account.data_account_type_expenses,0

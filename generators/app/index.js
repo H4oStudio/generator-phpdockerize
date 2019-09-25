@@ -2,34 +2,40 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
+const mkdir = require('mkdirp');
+
+const { lstatSync, readdirSync } = require('fs')
+const { join, basename } = require('path')
+
+
 
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the fantastic ' + chalk.red('generator-phpdockerize') + ' generator!'
+      'Bootstraps docker environments for many platforms'
     ));
+    const isDirectory = source => lstatSync(source).isDirectory()
+    const getDirectories = source => readdirSync(source).map(name => join(source, name)).filter(isDirectory)
+    const friendlyName = source => source.map(name => basename(name) )
 
     const prompts = [{
       type: 'list',
       name: 'stack',
-      choices: ['php7', 'sulu'],
-      message: 'Tipo de proyecto ?',
-      default: 'php7'
+      choices: friendlyName(getDirectories(this.sourceRoot())),
+      message: 'Project template:'
     }];
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       this.props = props;
-    });s
+    });
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath(this.props.stack),
-      this.destinationPath('.')
-    );
-    this.fs.delete('mysql/data/KEEP_ME');
+    var Processor = require(join(this.sourceRoot(), this.props.stack, 'index.js'))
+    var writer = new Processor()
+    writer.process(this)
   }
 
   install() {

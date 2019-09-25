@@ -1,0 +1,58 @@
+version: '2'
+
+services:
+
+  nginx-proxy:
+    restart: always
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/etc/nginx/vhost.d"
+      - "./conf.d:/etc/nginx/conf.d"
+      - "/usr/share/nginx/html"
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
+      - "/etc/nginx/certs"
+      - "/etc/nginx/dhparam"
+
+  letsencrypt-nginx-proxy-companion:
+    restart: always
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    volumes_from:
+      - "nginx-proxy"
+
+  odoo:
+    restart: always
+    image: opaconsulting/odoo12-master
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+      - ./addons:/mnt/extra-addons
+      - ./keys:/opt/keys
+      - ./odoo.conf:/etc/odoo/odoo.conf
+    environment:
+      VIRTUAL_HOST: odoo.opa-consulting.com
+      VIRTUAL_PORT: 8069
+      LETSENCRYPT_HOST: odoo.opa-consulting.com
+      LETSENCRYPT_EMAIL: glabois@opa-consulting.com
+      DEBUG: 0
+  db:
+    restart: always
+    image: postgres:9.6
+    environment:
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - POSTGRES_DB=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+volumes:
+  odoo-web-data:
+  odoo-db-data:

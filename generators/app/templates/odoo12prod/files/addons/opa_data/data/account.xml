@@ -1,0 +1,2125 @@
+<odoo>
+    <data>
+         <record model="account.account.type" id="data_account_type_capital">
+            <field name="name">Capital</field>
+            <field name="type">other</field>
+            <field name="internal_group">asset</field>
+            <field name="include_initial_balance" eval="True"/>
+        </record>
+        <record model="account.account.type" id="data_account_type_stock">
+            <field name="name">Inventario</field>
+            <field name="type">other</field>
+            <field name="internal_group">asset</field>
+            <field name="include_initial_balance" eval="True"/>
+        </record>
+        
+        <record id="opa_chart_template" model="account.chart.template">
+            <field name="name">Opa Consulting - Plan de cuentas</field>
+            <field name="currency_id" ref="base.USD"/>
+            <field name="bank_account_code_prefix"></field>
+            <field name="cash_account_code_prefix"></field>
+            <field name="transfer_account_code_prefix"></field>
+        </record>
+        <record id="account_account_110301003" model="account.account.template">
+            <field name="code">110301003</field>
+            <field name="name">(-) PROVISION CUENTAS INCOBRABLES</field>
+            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="group_id" ref="account_group_110301"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107013" model="account.account.template">
+            <field name="code">210107013</field>
+            <field name="name">IMPUESTOS POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610301001" model="account.account.template">
+            <field name="code">610301001</field>
+            <field name="name">AMORTIZ. PUBLICIDAD Y PROPAGANDA</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102001" model="account.account.template">
+            <field name="code">620102001</field>
+            <field name="name">SUELDOS Y SALARIOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101015" model="account.account.template">
+            <field name="code">610101015</field>
+            <field name="name">SERVICIO INTERNET </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620201007" model="account.account.template">
+            <field name="code">620201007</field>
+            <field name="name">AMORTZ. SOFTWARE - LICENCIAS</field>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="group_id" ref="account_group_620201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101018" model="account.account.template">
+            <field name="code">610101018</field>
+            <field name="name">SUMINISTROS LIMPIEZA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103016" model="account.account.template">
+            <field name="code">620103016</field>
+            <field name="name">AGASAJOS AL PERSONAL</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301013" model="account.account.template">
+            <field name="code">620301013</field>
+            <field name="name">COMB. Y MOVILIZACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104011" model="account.account.template">
+            <field name="code">620104011</field>
+            <field name="name">BONIFICACION POR DESAHUCIO</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105001" model="account.account.template">
+            <field name="code">620105001</field>
+            <field name="name">SUELDOS Y SALARIOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210105001" model="account.account.template">
+            <field name="code">210105001</field>
+            <field name="name">SUELDOS POR PAGAR EMPLEADOS</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210105"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101009" model="account.account.template">
+            <field name="code">620101009</field>
+            <field name="name">APORTE PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101004" model="account.account.template">
+            <field name="code">610101004</field>
+            <field name="name">COMBUSTIBLE </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110101001" model="account.account.template">
+            <field name="code">110101001</field>
+            <field name="name">CAJA CHICA GYE</field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="group_id" ref="account_group_110101"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103002" model="account.account.template">
+            <field name="code">620103002</field>
+            <field name="name">DECIMO TERCER SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_340101001" model="account.account.template">
+            <field name="code">340101001</field>
+            <field name="name">RESULTADO 2018</field>
+            <field name="user_type_id" ref="data_account_type_capital"/>
+            <field name="group_id" ref="account_group_340101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110301002" model="account.account.template">
+            <field name="code">110301002</field>
+            <field name="name">C X C CLIENTES CHEQUES POSTFECHADOS</field>
+            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="group_id" ref="account_group_110301"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210103002" model="account.account.template">
+            <field name="code">210103002</field>
+            <field name="name">PROVEEDORES - EXTERIOR</field>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="group_id" ref="account_group_210103"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620501001" model="account.account.template">
+            <field name="code">620501001</field>
+            <field name="name">INTERESES Y MULTAS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620501"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104006" model="account.account.template">
+            <field name="code">620104006</field>
+            <field name="name">FONDO DE RESERVA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_430101002" model="account.account.template">
+            <field name="code">430101002</field>
+            <field name="name">UTILIDAD EN VENTA DE ACTIVO FIJO</field>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="group_id" ref="account_group_430101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101019" model="account.account.template">
+            <field name="code">610101019</field>
+            <field name="name">TELEF. FIJA-CONVENCIONAL ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104001" model="account.account.template">
+            <field name="code">620104001</field>
+            <field name="name">SUELDOS Y SALARIOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_410101008" model="account.account.template">
+            <field name="code">410101008</field>
+            <field name="name">VENTA DE HARDWARE</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="group_id" ref="account_group_410101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102016" model="account.account.template">
+            <field name="code">620102016</field>
+            <field name="name">AGASAJOS AL PERSONAL</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110504001" model="account.account.template">
+            <field name="code">110504001</field>
+            <field name="name">DEPOSITO EN GARANTIA ARRIENDO</field>
+            <field name="user_type_id" ref="account.data_account_type_prepayments"/>
+            <field name="group_id" ref="account_group_110504"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107006" model="account.account.template">
+            <field name="code">210107006</field>
+            <field name="name">RET. EN LA FTE. IMPTO. RENTA - ROLES</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120405001" model="account.account.template">
+            <field name="code">120405001</field>
+            <field name="name">SOFTWARE PARA GESTION DE PEDIDOS ON LINE</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120405"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103010" model="account.account.template">
+            <field name="code">620103010</field>
+            <field name="name">ALIMENTACION DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620201004" model="account.account.template">
+            <field name="code">620201004</field>
+            <field name="name">DEPREC. EQUIP. COMPUT.ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="group_id" ref="account_group_620201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_510101004" model="account.account.template">
+            <field name="code">510101004</field>
+            <field name="name">COSTOSS FABRICA SOFTWARE</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="group_id" ref="account_group_510101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104004" model="account.account.template">
+            <field name="code">620104004</field>
+            <field name="name">VACACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105016" model="account.account.template">
+            <field name="code">620105016</field>
+            <field name="name">AGASAJOS AL PERSONAL</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102008" model="account.account.template">
+            <field name="code">620102008</field>
+            <field name="name">INDEMNIZ. PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103013" model="account.account.template">
+            <field name="code">620103013</field>
+            <field name="name">UNIFORMES DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_510101003" model="account.account.template">
+            <field name="code">510101003</field>
+            <field name="name">COSTOSS ZYGHT</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="group_id" ref="account_group_510101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105007" model="account.account.template">
+            <field name="code">620105007</field>
+            <field name="name">BONIF. A EMPLEADOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620401003" model="account.account.template">
+            <field name="code">620401003</field>
+            <field name="name">GASTO  POR IMPTOS. SAL. DIVISAS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620401"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101001" model="account.account.template">
+            <field name="code">610101001</field>
+            <field name="name">ALQUILER DE IMPRESORA</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101008" model="account.account.template">
+            <field name="code">610101008</field>
+            <field name="name">HONORARIOS PROFESIONALES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_330101002" model="account.account.template">
+            <field name="code">330101002</field>
+            <field name="name">RESERVA LEGAL</field>
+            <field name="user_type_id" ref="data_account_type_capital"/>
+            <field name="group_id" ref="account_group_3"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210105002" model="account.account.template">
+            <field name="code">210105002</field>
+            <field name="name">APORTE AL IEES POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210105"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102005" model="account.account.template">
+            <field name="code">620102005</field>
+            <field name="name">SOBRETIEMPO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301020" model="account.account.template">
+            <field name="code">620301020</field>
+            <field name="name">ENVIO DE CORRESPONDENCIA</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106007" model="account.account.template">
+            <field name="code">620106007</field>
+            <field name="name">BONIF. A EMPLEADOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101012" model="account.account.template">
+            <field name="code">620101012</field>
+            <field name="name">JUBILACION PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107003" model="account.account.template">
+            <field name="code">210107003</field>
+            <field name="name">RETENCION EN LA FUENTE 8% POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106006" model="account.account.template">
+            <field name="code">620106006</field>
+            <field name="name">FONDO DE RESERVA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101007" model="account.account.template">
+            <field name="code">620101007</field>
+            <field name="name">BONIF. A EMPLEADOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_510101001" model="account.account.template">
+            <field name="code">510101001</field>
+            <field name="name">COSTO DIRECTO LICENCIAS ODOO</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="group_id" ref="account_group_510101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107008" model="account.account.template">
+            <field name="code">210107008</field>
+            <field name="name">RETENCION DEL IVA 20% POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_420101001" model="account.account.template">
+            <field name="code">420101001</field>
+            <field name="name">DESCUENTOS EN VENTAS</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="group_id" ref="account_group_4201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103009" model="account.account.template">
+            <field name="code">620103009</field>
+            <field name="name">APORTE PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101005" model="account.account.template">
+            <field name="code">610101005</field>
+            <field name="name">ENERGIA ELECTRICA</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110501002" model="account.account.template">
+            <field name="code">110501002</field>
+            <field name="name">RET EN LA FUENTE 1 % VENTAS</field>
+            <field name="user_type_id" ref="account.data_account_type_prepayments"/>
+            <field name="group_id" ref="account_group_110501"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101002" model="account.account.template">
+            <field name="code">610101002</field>
+            <field name="name">BOTELLONES DE AGUA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301006" model="account.account.template">
+            <field name="code">620301006</field>
+            <field name="name">SUMINIS. OFIC E IMPRENTA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101007" model="account.account.template">
+            <field name="code">610101007</field>
+            <field name="name">GUARDIANIA Y SEGURIDAD</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210105008" model="account.account.template">
+            <field name="code">210105008</field>
+            <field name="name">FONDOS DE RESERVA POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210105"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301007" model="account.account.template">
+            <field name="code">620301007</field>
+            <field name="name">SUMINIS. CAFETERIA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301022" model="account.account.template">
+            <field name="code">620301022</field>
+            <field name="name">GASTO DE CTAS INCOBRABLES</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104014" model="account.account.template">
+            <field name="code">620104014</field>
+            <field name="name">VIATICOS Y MOVILIZACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105003" model="account.account.template">
+            <field name="code">620105003</field>
+            <field name="name">DECIMO CUARTO SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104007" model="account.account.template">
+            <field name="code">620104007</field>
+            <field name="name">BONIF. A EMPLEADOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102002" model="account.account.template">
+            <field name="code">620102002</field>
+            <field name="name">DECIMO TERCER SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210103003" model="account.account.template">
+            <field name="code">210103003</field>
+            <field name="name">OTRAS CTAS X PAGAR VARIOS</field>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="group_id" ref="account_group_210103"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101002" model="account.account.template">
+            <field name="code">620101002</field>
+            <field name="name">DECIMO TERCER SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_310101001" model="account.account.template">
+            <field name="code">310101001</field>
+            <field name="name">CAPITAL SOCIAL PAGADO</field>
+            <field name="user_type_id" ref="data_account_type_capital"/>
+            <field name="group_id" ref="account_group_310101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106017" model="account.account.template">
+            <field name="code">620106017</field>
+            <field name="name">ATENCIONES MEDICAS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105009" model="account.account.template">
+            <field name="code">620105009</field>
+            <field name="name">APORTE PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210105009" model="account.account.template">
+            <field name="code">210105009</field>
+            <field name="name">EXTENSION CONYUGES APORT.INDV POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301012" model="account.account.template">
+            <field name="code">620301012</field>
+            <field name="name">SEGUROS Y COBERTURAS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101011" model="account.account.template">
+            <field name="code">620101011</field>
+            <field name="name">BONIFICACION POR DESAHUCIO</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101003" model="account.account.template">
+            <field name="code">620101003</field>
+            <field name="name">DECIMO CUARTO SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110305001" model="account.account.template">
+            <field name="code">110305001</field>
+            <field name="name">OTRAS CTAS. POR COBRAR - VARIOS</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="group_id" ref="account_group_110305"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103017" model="account.account.template">
+            <field name="code">620103017</field>
+            <field name="name">ATENCIONES MEDICAS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120301002" model="account.account.template">
+            <field name="code">120301002</field>
+            <field name="name">DEP. ACUM. INSTAL. OFICINA</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210105003" model="account.account.template">
+            <field name="code">210105003</field>
+            <field name="name">CUENTAS POR PAGAR EMPLEADOS</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210105"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_510101005" model="account.account.template">
+            <field name="code">510101005</field>
+            <field name="name">COSTOS DE CAPACITACIONES</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="group_id" ref="account_group_510101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103003" model="account.account.template">
+            <field name="code">620103003</field>
+            <field name="name">DECIMO CUARTO SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610301002" model="account.account.template">
+            <field name="code">610301002</field>
+            <field name="name">PUBLICIDAD Y PROPAGANDA</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106008" model="account.account.template">
+            <field name="code">620106008</field>
+            <field name="name">INDEMNIZ. PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101014" model="account.account.template">
+            <field name="code">620101014</field>
+            <field name="name">VIATICOS Y MOVILIZACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120404003" model="account.account.template">
+            <field name="code">120404003</field>
+            <field name="name">LICENCIA HOSTING WEB LINUX</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120404"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_410101005" model="account.account.template">
+            <field name="code">410101005</field>
+            <field name="name">VENTA DE CAPACITACIONES</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="group_id" ref="account_group_410101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103005" model="account.account.template">
+            <field name="code">620103005</field>
+            <field name="name">SOBRETIEMPO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_410101004" model="account.account.template">
+            <field name="code">410101004</field>
+            <field name="name">VENTAS FABRICA SOFTWARE</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="group_id" ref="account_group_410101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101014" model="account.account.template">
+            <field name="code">610101014</field>
+            <field name="name">SEGURO Y COBERTURA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105011" model="account.account.template">
+            <field name="code">620105011</field>
+            <field name="name">BONIFICACION POR DESAHUCIO</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120106001" model="account.account.template">
+            <field name="code">120106001</field>
+            <field name="name">COSTO ADQUISIC EQUIPOS/COMPUT PRINCIPAL</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101010" model="account.account.template">
+            <field name="code">610101010</field>
+            <field name="name">MATRIC. SOAT VEHIC.</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104013" model="account.account.template">
+            <field name="code">620104013</field>
+            <field name="name">UNIFORMES DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101020" model="account.account.template">
+            <field name="code">610101020</field>
+            <field name="name">TELEFONIA CELULAR ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610201001" model="account.account.template">
+            <field name="code">610201001</field>
+            <field name="name">MANT. EQUIP. COMPUT. ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106004" model="account.account.template">
+            <field name="code">620106004</field>
+            <field name="name">VACACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106016" model="account.account.template">
+            <field name="code">620106016</field>
+            <field name="name">AGASAJOS AL PERSONAL</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210106002" model="account.account.template">
+            <field name="code">210106002</field>
+            <field name="name">PROVISION DECIMO CUARTO SUELDO</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210106"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104016" model="account.account.template">
+            <field name="code">620104016</field>
+            <field name="name">AGASAJOS AL PERSONAL</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110305002" model="account.account.template">
+            <field name="code">110305002</field>
+            <field name="name">ANTICIPO A PROVEEDORES LOCALES</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="group_id" ref="account_group_110305"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101001" model="account.account.template">
+            <field name="code">620101001</field>
+            <field name="name">SUELDOS Y SALARIOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101008" model="account.account.template">
+            <field name="code">620101008</field>
+            <field name="name">INDEMNIZ. PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301009" model="account.account.template">
+            <field name="code">620301009</field>
+            <field name="name">IMPUEST. MUNICIPALES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106011" model="account.account.template">
+            <field name="code">620106011</field>
+            <field name="name">BONIFICACION POR DESAHUCIO</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107012" model="account.account.template">
+            <field name="code">210107012</field>
+            <field name="name">IVA COBRADO</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620401002" model="account.account.template">
+            <field name="code">620401002</field>
+            <field name="name">COMISIONES BANCARIAS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620401"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120402001" model="account.account.template">
+            <field name="code">120402001</field>
+            <field name="name">(-) AMORTIZACION ACUM. GTOS PREOPERATIVOS</field>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="group_id" ref="account_group_120402"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101015" model="account.account.template">
+            <field name="code">620101015</field>
+            <field name="name">CAPACIT. Y ENTRENAM. </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620201003" model="account.account.template">
+            <field name="code">620201003</field>
+            <field name="name">DEPREC. MUEBLES Y ENSERES</field>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="group_id" ref="account_group_620201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101005" model="account.account.template">
+            <field name="code">620101005</field>
+            <field name="name">SOBRETIEMPO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106013" model="account.account.template">
+            <field name="code">620106013</field>
+            <field name="name">UNIFORMES DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104010" model="account.account.template">
+            <field name="code">620104010</field>
+            <field name="name">ALIMENTACION DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210105006" model="account.account.template">
+            <field name="code">210105006</field>
+            <field name="name">LIQUIDACION DE HABERES POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210105"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620401001" model="account.account.template">
+            <field name="code">620401001</field>
+            <field name="name">GASTOS BANCARIOS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620401"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_320101001" model="account.account.template">
+            <field name="code">320101001</field>
+            <field name="name">APORTE FUTURAS CAPITALIZACION</field>
+            <field name="user_type_id" ref="data_account_type_capital"/>
+            <field name="group_id" ref="account_group_320101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106001" model="account.account.template">
+            <field name="code">620106001</field>
+            <field name="name">SUELDOS Y SALARIOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101013" model="account.account.template">
+            <field name="code">610101013</field>
+            <field name="name">PERMISOS VARIOS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120104001" model="account.account.template">
+            <field name="code">120104001</field>
+            <field name="name">MUEBLES Y ENSERES ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107011" model="account.account.template">
+            <field name="code">210107011</field>
+            <field name="name">RETENCION DEL IVA 100% POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107010" model="account.account.template">
+            <field name="code">210107010</field>
+            <field name="name">RETENCION DEL IVA 70% POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102015" model="account.account.template">
+            <field name="code">620102015</field>
+            <field name="name">CAPACIT. Y ENTRENAM. </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301001" model="account.account.template">
+            <field name="code">620301001</field>
+            <field name="name">HONORARIOS PROFESIONALES</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106009" model="account.account.template">
+            <field name="code">620106009</field>
+            <field name="name">APORTE PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102007" model="account.account.template">
+            <field name="code">620102007</field>
+            <field name="name">BONIF. A EMPLEADOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210102001" model="account.account.template">
+            <field name="code">210102001</field>
+            <field name="name">OBLIG. BANC. BCO DEL INTERNACIONAL</field>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="group_id" ref="account_group_210102"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107004" model="account.account.template">
+            <field name="code">210107004</field>
+            <field name="name">RETENCION EN LA FUENTE 10% POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103014" model="account.account.template">
+            <field name="code">620103014</field>
+            <field name="name">VIATICOS Y MOVILIZACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620201008" model="account.account.template">
+            <field name="code">620201008</field>
+            <field name="name">AMORTIZ.GTOS PREOPERATIVOS</field>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="group_id" ref="account_group_620201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103012" model="account.account.template">
+            <field name="code">620103012</field>
+            <field name="name">JUBILACION PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110501004" model="account.account.template">
+            <field name="code">110501004</field>
+            <field name="name">CREDITO TRIBUTARIO IVA</field>
+            <field name="user_type_id" ref="account.data_account_type_prepayments"/>
+            <field name="group_id" ref="account_group_110501"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103007" model="account.account.template">
+            <field name="code">620103007</field>
+            <field name="name">BONIF. A EMPLEADOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210106003" model="account.account.template">
+            <field name="code">210106003</field>
+            <field name="name">PROVISION FONDOS DE RESERVA </field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210106"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110304001" model="account.account.template">
+            <field name="code">110304001</field>
+            <field name="name">ANTICIPO DE SUELDOS</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="group_id" ref="account_group_110304"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103008" model="account.account.template">
+            <field name="code">620103008</field>
+            <field name="name">INDEMNIZ. PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104015" model="account.account.template">
+            <field name="code">620104015</field>
+            <field name="name">CAPACIT. Y ENTRENAM. </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102013" model="account.account.template">
+            <field name="code">620102013</field>
+            <field name="name">UNIFORMES DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107001" model="account.account.template">
+            <field name="code">210107001</field>
+            <field name="name">RETENCION EN LA FUENTE 1% POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_410101002" model="account.account.template">
+            <field name="code">410101002</field>
+            <field name="name">VENTAS RENTA ODOO</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="group_id" ref="account_group_410101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101004" model="account.account.template">
+            <field name="code">620101004</field>
+            <field name="name">VACACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106002" model="account.account.template">
+            <field name="code">620106002</field>
+            <field name="name">DECIMO TERCER SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_430101001" model="account.account.template">
+            <field name="code">430101001</field>
+            <field name="name">INGRESOS VARIOS</field>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="group_id" ref="account_group_430101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102017" model="account.account.template">
+            <field name="code">620102017</field>
+            <field name="name">ATENCIONES MEDICAS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210103004" model="account.account.template">
+            <field name="code">210103004</field>
+            <field name="name">VALORES POR LIQUIDAR</field>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="group_id" ref="account_group_210103"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_430101003" model="account.account.template">
+            <field name="code">430101003</field>
+            <field name="name">INGRESOS POR LICENCIAS</field>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="group_id" ref="account_group_430101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102012" model="account.account.template">
+            <field name="code">620102012</field>
+            <field name="name">JUBILACION PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104003" model="account.account.template">
+            <field name="code">620104003</field>
+            <field name="name">DECIMO CUARTO SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210106001" model="account.account.template">
+            <field name="code">210106001</field>
+            <field name="name">PROVISION DECIMO TERCER SUELDO</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210106"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107005" model="account.account.template">
+            <field name="code">210107005</field>
+            <field name="name">RET. EN LA FTE. 1X1000 - Seguros</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105014" model="account.account.template">
+            <field name="code">620105014</field>
+            <field name="name">VIATICOS Y MOVILIZACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210105005" model="account.account.template">
+            <field name="code">210105005</field>
+            <field name="name">PRESTAMOS HIPOTECARIOS POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210105"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620201005" model="account.account.template">
+            <field name="code">620201005</field>
+            <field name="name">DEPRECIACION DE EDIFICIOS</field>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="group_id" ref="account_group_620201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_220701001" model="account.account.template">
+            <field name="code">220701001</field>
+            <field name="name">JUBILACION PATRONAL POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="group_id" ref="account_group_220701"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301021" model="account.account.template">
+            <field name="code">620301021</field>
+            <field name="name">ALQUILER DE IMPRESORA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_220201001" model="account.account.template">
+            <field name="code">220201001</field>
+            <field name="name">CTAS POR PAGAR A L/P</field>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="group_id" ref="account_group_220201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101017" model="account.account.template">
+            <field name="code">620101017</field>
+            <field name="name">ATENCIONES MEDICAS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301014" model="account.account.template">
+            <field name="code">620301014</field>
+            <field name="name">PASAJES DE AVION EJECUTIVO</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120402002" model="account.account.template">
+            <field name="code">120402002</field>
+            <field name="name">(-) AMORTIZACION ACUM . PUBLICIDAD Y PROPAGANDA</field>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="group_id" ref="account_group_120402"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107002" model="account.account.template">
+            <field name="code">210107002</field>
+            <field name="name">RETENCION EN LA FUENTE 2% POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105006" model="account.account.template">
+            <field name="code">620105006</field>
+            <field name="name">FONDO DE RESERVA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210105007" model="account.account.template">
+            <field name="code">210105007</field>
+            <field name="name">FONDOS POR MULTAS A EMPLEADOS</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210105"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120301004" model="account.account.template">
+            <field name="code">120301004</field>
+            <field name="name">DEP. ACUM. EQ. COMPUT. ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110305003" model="account.account.template">
+            <field name="code">110305003</field>
+            <field name="name">VALORES POR LIQUIDAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="group_id" ref="account_group_110305"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301008" model="account.account.template">
+            <field name="code">620301008</field>
+            <field name="name">SUMINIS. LIMPIEZA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101021" model="account.account.template">
+            <field name="code">610101021</field>
+            <field name="name">TELEFONIA CELULAR VTAS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_410101006" model="account.account.template">
+            <field name="code">410101006</field>
+            <field name="name">VENTA DE CONSULTORIAS</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="group_id" ref="account_group_410101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210103005" model="account.account.template">
+            <field name="code">210103005</field>
+            <field name="name">FACTURAS POR RECIBIR</field>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="group_id" ref="account_group_210103"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110301001" model="account.account.template">
+            <field name="code">110301001</field>
+            <field name="name">C X C - CLIENTES LOCALES</field>
+            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="group_id" ref="account_group_110301"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_510101002" model="account.account.template">
+            <field name="code">510101002</field>
+            <field name="name">COSTOS  RENTA ODOO</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="group_id" ref="account_group_510101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101012" model="account.account.template">
+            <field name="code">610101012</field>
+            <field name="name">PERMISO DE FUNCIONAMIENTO</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110501003" model="account.account.template">
+            <field name="code">110501003</field>
+            <field name="name">RET EN FUENTE 8% VENTA</field>
+            <field name="user_type_id" ref="account.data_account_type_prepayments"/>
+            <field name="group_id" ref="account_group_110501"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210111001" model="account.account.template">
+            <field name="code">210111001</field>
+            <field name="name">ANTICIPO DE CLIENTES</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210111"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_430101004" model="account.account.template">
+            <field name="code">430101004</field>
+            <field name="name">INGRESOS X AJUSTES DE CARTERA</field>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="group_id" ref="account_group_430101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_630101002" model="account.account.template">
+            <field name="code">630101002</field>
+            <field name="name">PERDIDA EN VENTA DE ACTIVOS FIJOS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_630101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110401001" model="account.account.template">
+            <field name="code">110401001</field>
+            <field name="name">LICENCIAS</field>
+            <field name="user_type_id" ref="data_account_type_stock"/>
+            <field name="group_id" ref="account_group_110401"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301018" model="account.account.template">
+            <field name="code">620301018</field>
+            <field name="name">GASTOS DE VIAJE</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105010" model="account.account.template">
+            <field name="code">620105010</field>
+            <field name="name">ALIMENTACION DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105017" model="account.account.template">
+            <field name="code">620105017</field>
+            <field name="name">ATENCIONES MEDICAS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102014" model="account.account.template">
+            <field name="code">620102014</field>
+            <field name="name">VIATICOS Y MOVILIZACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102003" model="account.account.template">
+            <field name="code">620102003</field>
+            <field name="name">DECIMO CUARTO SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120301001" model="account.account.template">
+            <field name="code">120301001</field>
+            <field name="name">DEP. ACUM. EDIFICIOS</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_510101008" model="account.account.template">
+            <field name="code">510101008</field>
+            <field name="name">COSTOS DE  HARDWARE</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="group_id" ref="account_group_510101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103004" model="account.account.template">
+            <field name="code">620103004</field>
+            <field name="name">VACACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620201001" model="account.account.template">
+            <field name="code">620201001</field>
+            <field name="name">DEPREC. VEHICULO ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="group_id" ref="account_group_620201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210105004" model="account.account.template">
+            <field name="code">210105004</field>
+            <field name="name">PRESTAMOS QUIROGRAFARIOS POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210105"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620201002" model="account.account.template">
+            <field name="code">620201002</field>
+            <field name="name">DEPREC. INSTALACIONES</field>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="group_id" ref="account_group_620201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103011" model="account.account.template">
+            <field name="code">620103011</field>
+            <field name="name">BONIFICACION POR DESAHUCIO</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106012" model="account.account.template">
+            <field name="code">620106012</field>
+            <field name="name">JUBILACION PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105012" model="account.account.template">
+            <field name="code">620105012</field>
+            <field name="name">JUBILACION PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101013" model="account.account.template">
+            <field name="code">620101013</field>
+            <field name="name">UNIFORMES DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301016" model="account.account.template">
+            <field name="code">620301016</field>
+            <field name="name">INTERNET </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301011" model="account.account.template">
+            <field name="code">620301011</field>
+            <field name="name">CONTRIBUCION SUPER CIAS.</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104009" model="account.account.template">
+            <field name="code">620104009</field>
+            <field name="name">APORTE PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106003" model="account.account.template">
+            <field name="code">620106003</field>
+            <field name="name">DECIMO CUARTO SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610201003" model="account.account.template">
+            <field name="code">610201003</field>
+            <field name="name">MANT Y REPARACIONES OFICINA ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120406001" model="account.account.template">
+            <field name="code">120406001</field>
+            <field name="name">GASTOS PREOPERATIVOS</field>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="group_id" ref="account_group_120406"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107009" model="account.account.template">
+            <field name="code">210107009</field>
+            <field name="name">RETENCION DEL IVA 30% POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105004" model="account.account.template">
+            <field name="code">620105004</field>
+            <field name="name">VACACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210106005" model="account.account.template">
+            <field name="code">210106005</field>
+            <field name="name">VACACIONES POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210106"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210103001" model="account.account.template">
+            <field name="code">210103001</field>
+            <field name="name">PROVEEDORES - LOCALES</field>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="group_id" ref="account_group_210103"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301015" model="account.account.template">
+            <field name="code">620301015</field>
+            <field name="name">AGUA POTABLE </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101010" model="account.account.template">
+            <field name="code">620101010</field>
+            <field name="name">ALIMENTACION DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101006" model="account.account.template">
+            <field name="code">620101006</field>
+            <field name="name">FONDO DE RESERVA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210107007" model="account.account.template">
+            <field name="code">210107007</field>
+            <field name="name">RETENCION DEL IVA 10% POR PAGAR</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210107"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105002" model="account.account.template">
+            <field name="code">620105002</field>
+            <field name="name">DECIMO TERCER SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105008" model="account.account.template">
+            <field name="code">620105008</field>
+            <field name="name">INDEMNIZ. PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301019" model="account.account.template">
+            <field name="code">620301019</field>
+            <field name="name">BOTELLONES DE AGUA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120404001" model="account.account.template">
+            <field name="code">120404001</field>
+            <field name="name">LICENCIAS Y SOFTWARES CONTABLES</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120404"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301017" model="account.account.template">
+            <field name="code">620301017</field>
+            <field name="name">ENERGIA ELECTRICA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101006" model="account.account.template">
+            <field name="code">610101006</field>
+            <field name="name">GARAJE/PARQUEO</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104008" model="account.account.template">
+            <field name="code">620104008</field>
+            <field name="name">INDEMNIZ. PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120301005" model="account.account.template">
+            <field name="code">120301005</field>
+            <field name="name">DEPREC. ACUM VEHICULO ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104012" model="account.account.template">
+            <field name="code">620104012</field>
+            <field name="name">JUBILACION PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110101002" model="account.account.template">
+            <field name="code">110101002</field>
+            <field name="name">CAJA GENERAL</field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="group_id" ref="account_group_110101"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_410101003" model="account.account.template">
+            <field name="code">410101003</field>
+            <field name="name">VENTAS ZYGHT</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="group_id" ref="account_group_410101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104017" model="account.account.template">
+            <field name="code">620104017</field>
+            <field name="name">ATENCIONES MEDICAS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104002" model="account.account.template">
+            <field name="code">620104002</field>
+            <field name="name">DECIMO TERCER SUELDO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_340201001" model="account.account.template">
+            <field name="code">340201001</field>
+            <field name="name">RESULTADO PRESENTE EJERCICIO</field>
+            <field name="user_type_id" ref="account.data_unaffected_earnings"/>
+            <field name="group_id" ref="account_group_340201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102010" model="account.account.template">
+            <field name="code">620102010</field>
+            <field name="name">ALIMENTACION DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101022" model="account.account.template">
+            <field name="code">610101022</field>
+            <field name="name">VIATICOS( HOSPEDAJE, MOV. ETC)</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120301003" model="account.account.template">
+            <field name="code">120301003</field>
+            <field name="name">DEP. ACUM. MUEB. Y ENSER. OFICINA</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_410101001" model="account.account.template">
+            <field name="code">410101001</field>
+            <field name="name">VENTAS DE PROYECTOS ODOO</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="group_id" ref="account_group_410101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301002" model="account.account.template">
+            <field name="code">620301002</field>
+            <field name="name">GASTOS LEGALES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106015" model="account.account.template">
+            <field name="code">620106015</field>
+            <field name="name">CAPACIT. Y ENTRENAM. </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106005" model="account.account.template">
+            <field name="code">620106005</field>
+            <field name="name">SOBRETIEMPO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_210106004" model="account.account.template">
+            <field name="code">210106004</field>
+            <field name="name">PARTICIPACION DE UTILIDADES</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="group_id" ref="account_group_210106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101009" model="account.account.template">
+            <field name="code">610101009</field>
+            <field name="name">IMPUEST. MUNICIPALES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301010" model="account.account.template">
+            <field name="code">620301010</field>
+            <field name="name">PERMISO DE BOMBEROS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105015" model="account.account.template">
+            <field name="code">620105015</field>
+            <field name="name">CAPACIT. Y ENTRENAM. </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110102001" model="account.account.template">
+            <field name="code">110102001</field>
+            <field name="name">BCO. INTERNACIONAL CTA CTE </field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="group_id" ref="account_group_110102"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103006" model="account.account.template">
+            <field name="code">620103006</field>
+            <field name="name">FONDO DE RESERVA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120401001" model="account.account.template">
+            <field name="code">120401001</field>
+            <field name="name">MARCAS Y PATENTES</field>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="group_id" ref="account_group_120401"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101017" model="account.account.template">
+            <field name="code">610101017</field>
+            <field name="name">SUMINIS. DE OFICINA E IMPRENTA</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106014" model="account.account.template">
+            <field name="code">620106014</field>
+            <field name="name">VIATICOS Y MOVILIZACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301005" model="account.account.template">
+            <field name="code">620301005</field>
+            <field name="name">ESTUDIO, ASESORIA Y CONSULTORIA</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_510101006" model="account.account.template">
+            <field name="code">510101006</field>
+            <field name="name">COSTOS DE CONSULTORIAS</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="group_id" ref="account_group_510101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110501001" model="account.account.template">
+            <field name="code">110501001</field>
+            <field name="name">C.TRIB.IMPUESTO  SALIDA  DIVISAS</field>
+            <field name="user_type_id" ref="account.data_account_type_prepayments"/>
+            <field name="group_id" ref="account_group_110501"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103015" model="account.account.template">
+            <field name="code">620103015</field>
+            <field name="name">CAPACIT. Y ENTRENAM. </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620104005" model="account.account.template">
+            <field name="code">620104005</field>
+            <field name="name">SOBRETIEMPO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620104"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_220701002" model="account.account.template">
+            <field name="code">220701002</field>
+            <field name="name">PROV. BONIFICACION X DESAHUCIO</field>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="group_id" ref="account_group_220701"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_410101007" model="account.account.template">
+            <field name="code">410101007</field>
+            <field name="name">VENTA DE SOPORTE</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="group_id" ref="account_group_410101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101003" model="account.account.template">
+            <field name="code">610101003</field>
+            <field name="name">BURO DE CREDITO-ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101011" model="account.account.template">
+            <field name="code">610101011</field>
+            <field name="name">PERMISO CUERPO DE BOMBEROS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620103001" model="account.account.template">
+            <field name="code">620103001</field>
+            <field name="name">SUELDOS Y SALARIOS </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620103"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_510101007" model="account.account.template">
+            <field name="code">510101007</field>
+            <field name="name">COSTOS DE SOPORTE</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="group_id" ref="account_group_510101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610201002" model="account.account.template">
+            <field name="code">610201002</field>
+            <field name="name">MANT. OFICINA ADM</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102009" model="account.account.template">
+            <field name="code">620102009</field>
+            <field name="name">APORTE PATRONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620101016" model="account.account.template">
+            <field name="code">620101016</field>
+            <field name="name">AGASAJOS AL PERSONAL</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620201006" model="account.account.template">
+            <field name="code">620201006</field>
+            <field name="name">AMORTIZ. PATENTE</field>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="group_id" ref="account_group_620201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301003" model="account.account.template">
+            <field name="code">620301003</field>
+            <field name="name">GASTOS DE REPRESENTACION </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105005" model="account.account.template">
+            <field name="code">620105005</field>
+            <field name="name">SOBRETIEMPO </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102006" model="account.account.template">
+            <field name="code">620102006</field>
+            <field name="name">FONDO DE RESERVA </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620301004" model="account.account.template">
+            <field name="code">620301004</field>
+            <field name="name">SERVICIOS PRESTADOS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620301"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_110304002" model="account.account.template">
+            <field name="code">110304002</field>
+            <field name="name">PRESTAMO A EMPLEADOS</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="group_id" ref="account_group_110304"/>
+            <field name="reconcile">1</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_120404002" model="account.account.template">
+            <field name="code">120404002</field>
+            <field name="name">LICENCIAS ANTIVIRUS FIREWALL</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="group_id" ref="account_group_120404"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_630101001" model="account.account.template">
+            <field name="code">630101001</field>
+            <field name="name">INTERESES A TERCEROS</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_630101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620105013" model="account.account.template">
+            <field name="code">620105013</field>
+            <field name="name">UNIFORMES DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620105"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102011" model="account.account.template">
+            <field name="code">620102011</field>
+            <field name="name">BONIFICACION POR DESAHUCIO</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620102004" model="account.account.template">
+            <field name="code">620102004</field>
+            <field name="name">VACACIONES </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620102"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_420101002" model="account.account.template">
+            <field name="code">420101002</field>
+            <field name="name">NOTA DE CREDITO FINANCIERA</field>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="group_id" ref="account_group_4201"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_610101016" model="account.account.template">
+            <field name="code">610101016</field>
+            <field name="name">SUM. CAFETERIA</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_610101"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620106010" model="account.account.template">
+            <field name="code">620106010</field>
+            <field name="name">ALIMENTACION DEL PERSONAL </field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620106"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+        <record id="account_account_620501002" model="account.account.template">
+            <field name="code">620501002</field>
+            <field name="name">GASTOS NO DEDUCIBLES</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="group_id" ref="account_group_620501"/>
+            <field name="reconcile">0</field>
+            <field name="chart_template_id" ref="opa_chart_template"/>
+        </record>
+
+       <record id="opa_chart_template" model="account.chart.template">
+            <field name="property_account_receivable_id" ref="account_account_110301001"/>
+            <field name="property_account_payable_id" ref="account_account_210103001"/>
+        </record>   
+    </data>
+</odoo>
